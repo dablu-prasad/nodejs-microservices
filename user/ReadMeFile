@@ -1,0 +1,55 @@
+Steps1:
+-------------
+docker build --tag user-docker .
+Steps2:
+-----------
+docker run --name express-api -d -p 4004:4004 user-docker
+Step3:
+-------
+docker ps
+
+Step4:
+--------
+docker images
+
+steps5:
+  -----------
+docker exec -it containerId bash              
+    --pwd
+    --ls
+Steps6:
+---------------
+docker system prune -f     (-- for stop all images in stoped contaier)
+
+sudo netstat -ltnp | grep ':5432'  
+
+sudo service postgresql stop           ---for stop file
+
+sudo rm -rf data       --for remove file
+
+docker rmi img_name     ---for remove all images
+
+-- for stop running port
+sudo ss -lptn 'sport = :5432'  (-- run this port or got pid)
+
+sudo kill <pid>
+
+docker-compose up --build -d
+
+docker-compose down
+
+docker exec -it <container-Id> bash
+
+
+
+
+
+
+
+----for postgres query on terminal-------------
+
+1) sudo su postgres
+2) psql
+3) create database -->dbname<--;
+
+
